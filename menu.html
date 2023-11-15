@@ -5,6 +5,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/menu.css">
     <script src="https://kit.fontawesome.com/b8991598b2.js"></script>
+	<script src="js/menu.js"></script>
+
 	<title>Document</title>
 </head>
 <body>
@@ -180,10 +182,19 @@
 				<div class="main__product_place">
 					<div class="main__product_place_sort">
 						<h4>Sort by</h4>
-						<p>Price</p>
-						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-						  <path d="M18 9L12 15L6 9" stroke="#33363F" stroke-width="2"/>
-						</svg>
+						<div class="dropdown">
+							<div class="select">
+								<span class="selected">None</span>
+								<div class="caret"></div>
+							</div>
+							<ul class="menu">
+								<li>Cheaper</li>
+								<li>More expensive</li>
+								<li>By popularity</li>
+								<li class="active"></li>
+							</ul>
+						</div>
+						
 					</div>
 					<div class="main__product_place_row">
 						<a href="product.html">

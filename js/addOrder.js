@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () =>{
     const quantityElement = document.querySelector('#quantity');
     const productPrice = document.querySelector('#price');
     const fullPriceElement = document.querySelector('.main__order__price');
+    const buyBtn  = document.querySelector('.main__order__doOrderBtn');
     const price = 4;
     let quantity = 0;
 
@@ -20,5 +21,17 @@ document.addEventListener('DOMContentLoaded', () =>{
                 fullPriceElement.textContent = `Price: ${price*quantity}$`;
             }
         });
+    });
+
+    buyBtn.addEventListener('click', () =>{
+        if(quantity > 0){
+            var data = confirm(`Ви підтверджуєте замовлення?`);
+            if (data){
+                alert('Ви зробили замовлення');
+                quantity = 0;
+                quantityElement.textContent = quantity
+                fullPriceElement.textContent = `Price: ${price*quantity}$`;
+            }
+        }
     });
 });
